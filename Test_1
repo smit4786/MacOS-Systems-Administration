@@ -1,0 +1,14 @@
+#!/bin/sh
+
+##Created by Justin S. Smith
+
+## Define Variables
+
+admin_user
+admin_password
+jamf_server
+enforce_mdm=$(sudo jamf manage)
+
+read -p 'Username: ' admin_user
+read -sp 'Password: ' admin_password
+
