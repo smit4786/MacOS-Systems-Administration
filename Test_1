@@ -14,3 +14,11 @@ read -sp 'Password: ' admin_pass
 
 	
 curl -su admin_user:admin_pass "https://${jamf_server}/JSSResource/computergroups/id/0" -H "content-type: application/xml" -X POST -T /path/to/filename.xml
+
+"<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+<plist version="1.0">
+<dict>
+	
+</dict>
+</plist>"
