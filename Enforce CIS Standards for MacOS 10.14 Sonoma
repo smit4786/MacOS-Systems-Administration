@@ -1,0 +1,11 @@
+#!/bin/bash
+## Created By: Justin S. Smith
+## Enforce CIS Standards for MacOS 10.14 Sonoma (Initial Configuration)
+
+## Define Variables
+
+## Enable Auto Software Update (Resolves Multiple Benchmarks
+
+## Confirm Software is Up-To-Date
+
+## 
