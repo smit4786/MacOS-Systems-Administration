@@ -22,3 +22,5 @@ curl -su admin_user:admin_pass "https://${jamf_server}/JSSResource/computergroup
 	
 </dict>
 </plist>"
+
+enforce_mdm
