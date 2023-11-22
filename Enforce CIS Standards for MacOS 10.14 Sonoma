@@ -2,10 +2,34 @@
 ## Created By: Justin S. Smith
 ## Enforce CIS Standards for MacOS 10.14 Sonoma (Initial Configuration)
 
+## Define resources (determine plist or json for actionable items)
+## /bin/mkdir -p /IT/Logs/
+## /usr/bin/touch /IT/Logs/CIS_compliance.txt
+
 ## Define Variables
+## LOGFILE="/IT/Logs/CIS_compliance.txt"
 
-## Enable Auto Software Update (Resolves Multiple Benchmarks
+## Get a list of system users and store in a variable - research required
 
-## Confirm Software is Up-To-Date
+## Enable Auto Software Update (Resolves Multiple Benchmarks)
+## /usr/bin/sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+## /usr/bin/sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool true 
+## /usr/bin/sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool TRUE
+## /usr/bin/sudo /usr/bin/defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool TRUE
+## /usr/bin/sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate ConfigDataInstall -bool true 
+## /usr/bin/sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall -bool true
 
-## 
+## Check Software is Up-To-Date
+
+## /usr/bin/sudo /usr/sbin/softwareupdate -l || /bin/echo "Software already current" >> $LOGFILE
+
+## Update all Software 
+
+## /usr/bin/sudo /usr/sbin/softwareupdate -i -a
+
+## Declarative MDM Profile configuration, implementation, and verification
+
+
+
+
+## Secure keyboard entry
